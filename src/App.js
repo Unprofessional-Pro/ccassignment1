@@ -1,16 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from './images/NuberLogo.png';
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello from V2</h1>
-      </header>
-    </div>
-  );
-}
+//Amazon bad.
+
+const App = () => {
+
+  const [state, setState] = useState(false);
+  const handleSignIn = event => {
+    event.preventDefault();
+  }
+
+    return (
+      <div>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>Welcome to Nuber!</h1>
+        </header>
+        <body className="App-body">
+          <p>The future in ride sharing!</p>
+          <p>New here? Create an account!</p>
+          <button className="App-button">Create Account</button>
+          <p>Been here before? Be sure to sign in.</p>
+          <button className="App-button">Sign In</button>
+        </body>
+      </div>
+    );
+};
 
 export default App;
